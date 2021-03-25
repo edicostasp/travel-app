@@ -1,16 +1,10 @@
 // function triggered by eventListener (button click), takes user input and checks user input
 export function handleSubmit(event) {
     event.preventDefault()
-
-    // save user input 
-    let destinationCity = document.getElementById('city').value
+    let destinationCity = document.getElementById('city').value // save user input 
     let date = document.getElementById('departure').value;
-    
-    // regex for non-empty string
-    const rg = new RegExp(/^(?!\s*$).+/);
-
-    // check entered data non-empty 
-    if (rg.test(destinationCity) && rg.test(date)){
+    const rg = new RegExp(/^(?!\s*$).+/);                       // regex for non-empty string 
+    if (rg.test(destinationCity) && rg.test(date)){             // check entered data non-empty
         const data = {
             city: destinationCity,
             departure: date
@@ -22,7 +16,7 @@ export function handleSubmit(event) {
             if (res.success == false){
                 alert("ERROR fetching data. Check if your input is correct")
             }
-            // else update UI according to server response and data received from user
+            // else, according to server response and data received from user, update User Interface 
             else {
                 Client.updateUI(res, data);
             }
@@ -43,10 +37,9 @@ const getInfoTrip = async (url = '', data = {})=>{
         }, 
         body: JSON.stringify(data),
     });
-
     try {
-        const data = await response.json();
-        return data;
+        const info = await response.json();
+        return info;
     } catch(error) {
         console.log("error !!!!!!!!!", error);
     }

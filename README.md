@@ -17,7 +17,7 @@ The goal of the project is to build a travel app which receive the desired trip 
 
 ## .Env file
 
-You will need to rename the '.env-UPDATEME' file to '.env' and enter your own API credentials
+You will need to create the '.env' file and enter your own API credentials
 
   ```
   PIXABAY_API_KEY=**************************
