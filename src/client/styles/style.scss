@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Source+Sans+Pro:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+	width: 100%;
+	background-color: #eeebe5;
+	height: 100%;
+}
+
+#container {
+	width: 300px;
+	margin-left: auto;
+	min-height: 100%;
+	margin-right:auto;
+	flex-direction: column;
+	display: flex;
+	align-items: stretch;
+}
+
+header{
+	background-color: #8cf39a;
+	color: #399c53;
+	text-align: center;
+}
+
+#main {
+	flex-grow: 1;
+}
+
+header, main, footer {
+	flex-shrink: 0;
+}
+
+
+h1 {
+	padding: 10px 0px 10px 0px;
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 20px;
+	color: #4579bb;
+	margin: 10px 0px 10px 0px;
+}
+
+h3 {
+	font-size: 18px;
+	color: #4579bb;
+	margin: 5px 0px 5px 0px;
+}
+
+.title h2 {
+	color: #4579bb;
+}
+
+p {
+	font-size: 14px;
+	color: #4579bb;
+	margin: 5px 0px 5px 0px;
+}
+
+span {
+	font-size: 14px;
+}
+
+#section1 {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	width: 300px;
+	align-self: center;
+	background-color:  #eeebe5;
+	margin-right: auto;
+	margin-left: auto;
+	// margin-bottom: 20px
+}
+p {
+	font-size: 2vw;
+}
+#formInput{
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+}
+
+input[type=text] {
+	border: none;
+	text-align: center;
+	margin-bottom: 10px;
+}
+input[type=date] {
+	border: none;
+	color: #55a2c3;
+	text-align: center;
+	margin-bottom: 10px;
+}
+::placeholder {
+	color: #55a2c3;
+	text-align: center;
+}
+
+button {
+	border: none;
+	color: white;
+	background-color: #55a2c3;
+	text-decoration: none;
+	padding: 5px 10px;
+	transition-duration: 0.4s;
+}
+
+button:hover {
+	background-color: #8cf39a;
+}
+
+#banner{
+	background-image: url("../media/fernando-de-noronha-1024x680.jpg");
+	background-repeat: no-repeat;
+	background-size: 300px;
+	background-position: center;
+	height: 250px;
+}
+#section2 {
+	display: none;
+	flex-direction: column;
+	width: 300px;
+	align-items: center;
+	background: white;
+	/* padding: 0px 10px 10px 10px; */
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+#sec2_title {
+	padding: 0px 0px 20px 0px;
+
+}
+
+#output_card {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 30px;
+	justify-content: space-evenly;
+	// align-items: center;
+}
+
+#output_img {
+	width: 100%;
+	height: auto;
+}
+
+#outputImg2 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+}
+
+#outputText {
+	text-align: center;
+	color: #0444BF;
+	align-items: center;
+	justify-content: space-evenly;
+	align-self: center;
+}
+
+#forecast {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#departInfo {
+	color: #55a2c3;
+}
+
+#weather_title p{
+	font:bold;
+	color: #55a2c3;
+}
+
+#day_desc {
+	color: #55a2c3;
+}
+
+#weather_icon {
+	width: 50px;
+}
+.day_forecast {
+	display: flex;
+	flex-direction: column;
+}
+.day_forecast p {
+	color: #55a2c3;
+}
+footer {
+	display: flex;
+	flex-direction: row;
+	background-color: #8cf39a;
+	font-size: 12px;
+	justify-content: center;
+	padding: 5px 5px 5px 5px;
+}
+footer p {
+	color: #399c53;
+}
+#copy {
+	margin: auto;
+}
+
+/* Medium Screens */
+@media (min-width: 600px) and (max-width:900px) {
+	#container {
+		width: 600px;
+	}
+	h1 {
+		font-size: 36px;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	h3 {
+		font-size: 22px;
+	}
+	p {
+		font-size: 18px;
+	}
+	span {
+		font-size: 18px;
+	}
+	#section1 {
+		width: 600px;
+		align-items: center;
+	}
+	#formInput {
+		flex-direction: row;
+		margin-bottom: 0;
+		width: 450px;
+		justify-content: space-evenly;
+		height: 30px;
+	}
+	input[type=text] {
+		margin-bottom: 0;
+	}
+
+	input[type=date] {
+		margin-bottom: 0px;
+	}
+	::placeholder {
+		color: #55a2c3;
+		align-content: center;
+	}
+	#banner {
+		background-size: 450px auto;
+		height: 350px;
+	}
+	#section2 {
+		width: 600px;
+		margin-top: 30px;
+	}
+	#output_card {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	#output_img {
+		flex: 50%;
+	}
+
+	#outputImg2 {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 250px;
+		/* text-align: center; */
+
+	}
+	#outputText {
+		flex: 50%;
+		// text-align: left;
+		margin-top: 0;
+	}
+	#weather_title {
+		font: bold;
+	}
+	#outputText h3 {
+		margin-top: 0;
+	}
+	#weather_icon {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+	}
+	footer p{
+		font-size: 14px;
+	}
+}
+
+/* Large Screens */
+@media (min-width: 901px) {
+	#container {
+		width: 900px;
+	}
+	
+	h1 {
+		font-size: 48px;
+	}
+	h2 {
+		font-size: 28px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	p {
+		font-size: 20px;
+	}
+	span {
+		font-size: 20px;
+	}
+	#formInput {
+		flex-direction: row;
+	}
+	#section1 {
+		width: 900px;
+		align-items: center;
+	}
+	#banner {
+		background-size: 450px auto;
+		height: 400px;
+		display:block;
+	}
+	#section2 {
+		margin-top: 20px;
+		width: 900px;
+	}
+	#formInput {
+		flex-direction: row;
+		margin-bottom: 0;
+		width: 450px;
+		justify-content: space-evenly;
+		height: 30px;
+	}
+	input[type=text] {
+		margin-bottom: 0;
+		background-color: white;
+	}
+	input[type=date] {
+		margin-bottom: 0px;
+		background-color: white;
+	}
+	::placeholder {
+		background-color: white;
+	}
+	#output_card {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	#output_img {
+		flex: 50%;
+	}
+	#outputImg2 {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 250px;
+	}
+	#outputText {
+		flex: 50%;
+		// text-align: left;
+		margin-top: 0;
+	}
+	#weather_title {
+		font: bold;
+	}
+	#outputText h3 {
+		margin-top: 0;
+	}
+	#weather_icon {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+	}
+	footer p{
+		font-size: 16px;
+	}
+}

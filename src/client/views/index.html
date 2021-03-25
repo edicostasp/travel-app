@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel plans</title>
+  </head>
+  <body>
+    <div id="container">
+    <header><h1>My Travel planner</h1></header>
+    <div id="main">
+      <div id ="section1">
+        <div class = "title"><h2>What is your next destination and trip date</h2></div>
+        <form id="formInput">
+          <input type="text" id="city" placeholder="Where are you going?">
+          <input type="date" id="departure" name="datemin" min="2015-01-02">
+          <button id="generate" type = "submit">Start your journey</button>
+        </form>
+      </div>
+      <div id="banner"> </div>
+      <div id ="section2">
+        <div id = "city">
+          <h2>
+            <span id="destCity"></span>
+            <span id="destCountry"></span>
+          </h2>
+        </div>
+        
+        <div id="output_card">
+          <div id="output_img">
+            <img src="" alt="city" id="outputImg2">
+          </div>
+
+          <div id = "outputText">
+            <div><p ><span id="departInfo"></span></p></div> 
+            <div id="weather_title"><p><span id="dayTemp"></span></p></div>
+            <div id="forecast">
+              <div id="forecastDetails">
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="copy"><p>Copyright © 2021. All Rights Reserved.</p></div>
+    </footer>
+    <script>
+      if ('serviceWorker' in navigator) {                                  // Check service workers 
+              window.addEventListener('load', () => {                      // Use window load event to keep the page load perform
+              navigator.serviceWorker.register('/service-worker.js');
+          });
+      }
+  </script>
+  </div>
+  </body>
+</html>
