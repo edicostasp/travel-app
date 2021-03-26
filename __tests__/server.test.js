@@ -1,11 +1,14 @@
-const app = require('../server/index.js')
-const supertest = require('supertest')
-const request = supertest(app)
+const request = require('supertest');
+const app = require('/src/server/index');
+const GEONAMES_USER_KEY = process.env.GEONAMES_USER_KEY;
 
-describe('Post to the endpoint', () => {
-    it('/', async done => {
-        const response = await request.get('/')
-        expect(response.status).toBe(200)
-        done()
-    })
-})
+describe('Post Endpoints', () => {
+    it('get geo name locations', async () => {
+        const res = await request(app)
+            .post('/trip')
+            .send({
+                BASE_URL: `http://api.geonames.org/searchJSON?formatted=true&q=miami&username=${GEONAMES_USER_KEY}`,
+            });
+        expect(res.statusCode).toEqual(200);
+    });
+});

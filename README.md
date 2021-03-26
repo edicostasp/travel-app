@@ -32,3 +32,6 @@ Detailed project specifications available [here](https://review.udacity.com/#!/r
 
 ## VIEW
 App interface for desktop
+
+## Chosen requirement Suggestions 
+* Incorporate icons into forecast.
